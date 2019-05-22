@@ -1,7 +1,5 @@
-
-    
 <?php
-
+session_start();
 
 $link = mysqli_connect("localhost", "root", "", "starchild");
  
@@ -12,19 +10,24 @@ if($link === false){
 
 
 //to prevent mysql injection
+//login user
 
 $username=mysqli_real_escape_string($link, $_REQUEST['username']);
 $pass=mysqli_real_escape_string($link, $_REQUEST['password']);
+$permissions="";
 
 //query
 $res=$link->query("SELECT * FROM users WHERE username='$username' and password='$pass'") or die("Query Failed".mysqli_error());
 $row=mysqli_fetch_array($res);
-if($row['username'] == $username && $row['password'] == $pass){
+$permissions=$row['permissions'];
+if($row['username'] == $username && $row['password'] == $pass && $permissions="admin"){
         //echo "LOGIN SUCCESS!! WELCOME ".$row['username'];
-        header('Location:../../home.php');
+        header('Location:../../admin/admin.php');
 
+    }elseif($row['username'] == $username && $row['password'] == $pass){
+        header('Location:../../home.php');
     }else{
-        echo "failed to login";
+        echo 'Login Failed';
     }
 
             // Redirect user to index.php

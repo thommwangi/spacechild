@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="item">
           <div class="bcg" style="background-image: url(images/index/view2.jpg);"></div>
           <div class="content">

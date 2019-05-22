@@ -39,7 +39,7 @@
 						
 						
 					</ol><!-- /fs-fields -->
-					<button class="fs-submit" type="submit">Log in</button>
+					<button class="fs-submit" type="submit" name="submit_btn">Log in</button>
 				</form><!-- /fs-form -->
 			</div><!-- /fs-form-wrap -->
 

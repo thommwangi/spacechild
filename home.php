@@ -9,25 +9,25 @@
         </head>
     <body>
         <header> 
-        <div class="container">
+    <div class="container">
   
   
   
   
   <div class="navigation-wrapper">
-    <div class="navigation-button">
-      <i class="fa fa-bars"></i>
-    </div>
-    <div class="navigation-menu">
-        <ul>
-          <li><a href="home.php">Home</a></li><br>
-          <li><a href="solarsystem.php">Solar System</a></li><br>
-          <li><a href="universe.php">Universe</a></li><br>
-          <li><a href="spacestuff.php">Space Stuff</a></li><br>
+        <div class="navigation-button">
+        <i class="fa fa-bars"></i>
+            </div>
+            <div class="navigation-menu">
+                <ul>
+                    <li><a href="home.php">Home</a></li><br>
+                    <li><a href="solarsystem.php">Solar System</a></li><br>
+                    <li><a href="universe.php">Universe</a></li><br>
+                    <li><a href="spacestuff.php">Space Stuff</a></li><br>
          
-      </ul>
-    </div>
-  </div>
+                </ul>
+            </div>
+        </div>
         </header>
         <section class="slider">
             <ul class="slider-carousel" id="slider-carousel">
