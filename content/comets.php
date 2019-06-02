@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="sun.css"> 
-   
-    <title>Comets</title>
+  <link href="sun.css" rel="stylesheet" type="text/css">
+  <title>Comets</title>
+  <style>
 
-    <style>
-  *{
+*{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
   }
-  body{
+  body{ 
    font-family: sans-serif;
   }
   a:link,
@@ -82,9 +77,10 @@
 }
 
 
-.wrapper{
+    .wrapper{
     margin: 0;
     width:1000px;
+    
     
 }
 .videowrapper{
@@ -103,60 +99,63 @@
     bottom:0px;
     height:100%;
     width:100%;
-}
-   p{
-    
-	text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-}
+    align:middle;
    
+   
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
- </style>
+.button:hover {background-color: #3e8e41}
 
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+  </style>
 </head>
-<body>
-<header> 
-    <div class="container">
-
-        <div class="navigation-wrapper">
-            <div class="navigation-button">
-            <i class="fa fa-bars"></i> </div>
-            <div class="navigation-menu">
-                <ul>
-                    <li><a href="home.php">Home</a></li><br>
-                    <li><a href="solarsystem.php">Solar System</a></li><br>
-                    <li><a href="universe.php">Universe</a></li><br>
-                    <li><a href="spacestuff.php">Space Stuff</a></li><br>
-         
-                </ul>
-            </div>
-        </div>
-        </header>
-    <header class="v-header container">
-        <div class="fullscreen-video-wrap">
-            <video src="videos/comets2.mp4" autoplay="true"
-            loop="true" controls muted></video>
-        </div>
-        <div class="header-overlay">
+<header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      
+      <video src="videos/comets2.mp4" autoplay="" loop="" controls muted>
+    </video>
+    </div>
+    <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:white;font-size:10vw;">Comets</h1>
-                <p style="color:white;font-size:2vw;">A comet's tail can be millions of kilometers in length, but the amount of matter it contains can be held in a large bookbag. 
-                Scientists believe that comets are made up of material left over from when the Sun and the planets were formed. They think that about 100,000 million comets orbit the Sun. Some comets orbit the Sun like planets. Their orbits take them very close to and very far away from the Sun.
+                <h1 style="color:black;font-size:10vw;">Comets</h1>
+                <p style="color:black;font-size:2vw;">A comet's tail can be millions of kilometers in length, 
+                but the amount of matter it contains can be held in a large bookbag. 
+                Scientists believe that comets are made up of material left over from when the Sun and the
+                 planets were formed. They think that about 100,000 million comets orbit the Sun. Some comets
+                  orbit the Sun like planets. Their orbits take them very close to and very far away from the Sun.
                     Watch the video below to learn more or click to read more.</p>
                      <a href="#modal" class="modal-open">Read More</a>
                      
                <div class="modal" id="modal">  
                    <div class="modal__content">    
                    <a href="#" class="modal__close">&times;</a>
-                   <h2 class="modal__heading">Comets</h2>
-                   <p class="modal__paragraph">A comet is made of dirty ice, dust, and gas. When a comet gets close to the Sun, part of the ice starts to melt. The solar winds then push the dust and gas released by the melting ice away from the comet. This forms the comet's tail. Every time a comet comes close to the Sun, a part of it melts. Over time, it will completely disappear.
+                   <h2 class="modal__heading">The Comets</h2>
+                   <p class="modal__paragraph">A comet is made of dirty ice, dust, and gas. When a comet gets
+                    close to the Sun, part of the ice starts to melt. The solar winds then push the dust and 
+                    gas released by the melting ice away from the comet. This forms the comet's tail. Every
+                     time a comet comes close to the Sun, a part of it melts. Over time, it will completely disappear.
 
-A comet does not give off any light of its own. What seems to be light from the comet is actually a reflection of our Sun's light. Sunlight bounces off the comet's ice particles in the same way light is reflected by a mirror.
+                    A comet does not give off any light of its own. What seems to be light from the comet is actually a reflection
+                    of our Sun's light. Sunlight bounces off the comet's ice particles in the same way light is reflected by a mirror.
 
-A few comets come close enough to the Earth for us to see them with our eyes. Halley's Comet, for example, can be seen from Earth every 76 years.
+                    A few comets come close enough to the Earth for us to see them with our eyes. Halley's Comet, for example, 
+                    can be seen from Earth every 76 years.
                             </p>
                         </div>
                     </div>      
@@ -164,27 +163,22 @@ A few comets come close enough to the Earth for us to see them with our eyes. Ha
 
             </div>
         </div>
-    </header>
-   
-        <div class="wrapper">
-       
-            <div class="videowrapper">
-            
-            </div>
-        </div>
-    
-    <section class="section section-b">
-        <div class="container">
-            <h1>part 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequuntur eaque 
-                accusantium expedita incidunt quaerat odio nesciunt commodi ratione qui minus distinctio 
-                corrupti dolore dolor nostrum libero eius dolorem, porro impedit quibusdam ex quod ut cum. 
-                Neque optio fugiat repellat inventore unde non consequatur assumenda. In quod accusamus 
-                ipsam tempore.</p>
-                
-        </div>
-    </section>
-    <!-- <script src="../js/nav.js"></script> -->
-</body>
+  </header>
 
-</html>
+  <div class="wrapper">
+  
+        <div class="videowrapper">
+          
+        <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; 
+        autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          align="middle"></iframe>
+        </div>
+    </div>
+
+  <section class="section section-b">
+    <div class="container">
+      <h2>Quiz About Comets</h2>
+      <button class="button" onclick="window.location.href = 'quizes/cometsquiz.php';">Click Here</button>
+    </div>
+  </section>
+  </html>

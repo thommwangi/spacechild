@@ -1,5 +1,7 @@
 <?php
 include '../head.php';
+//include 'head.php';
+//include 'navigation.php';
 $link = mysqli_connect("localhost", "root", "", "starchild");
  
 // Check connection
@@ -15,11 +17,13 @@ if(isset($_GET['delete'])){
 }
 //for adding new user
 if(isset($_GET['add'])){
-$name=((isset($_POST['name']))?sanitize($_POST['name']):'');
-$email=((isset($_POST['email']))?sanitize($_POST['email']):'');
-$password=((isset($_POST['password']))?sanitize($_POST['password']):'');
-$confirm=((isset($_POST['confirm']))?sanitize($_POST['confirm']):'');
-$permissions=((isset($_POST['permissions']))?sanitize($_POST['permissions']):'');
+$name=((isset($_POST['names'])));
+$uname=((isset($_POST['usernames'])));
+$email=((isset($_POST['emails'])));
+$password=((isset($_POST['passwords'])));
+$confirm=((isset($_POST['confirm'])));
+
+$permissions=((isset($_POST['permissionss'])));
 $errors=array();
 
 //validation adding new user form
@@ -30,7 +34,7 @@ if($_POST){
     if($emailCount != 0){
         $errors[]='The Entered Email Already Exists In The Database';
     }
-    $required = array('name','email','password','confirm','permissions');
+    $required = array('name','username','email','password','permissions');
     foreach($required as $f){
         if(empty($_POST[$f])){
             $errors[]='You Must Fill Out All Fields!';
@@ -47,30 +51,35 @@ if($_POST){
         $errors[]='You Must Enter A Valid Email';
     }
     
-    if(!empty($errors)){
-        echo display_errors($errors);
-    }else{
+   //echo $_POST['names'];
         //add new user to database
-        $hashed = password_hash($password,PASSWORD_DEFAULT);
-        $link->query("INSERT INTO users (fullnames, username, email,password) VALUES ('$fullNames', '$userName', '$email','$password')");
+        //$hashed = password_hash($password,PASSWORD_DEFAULT);
+        $link->query("INSERT INTO users (fullnames, username, email,password,permissions) VALUES ('$name', '$uname', '$email','$password','$permissions')");
         $_SESSION['success_flash'] = 'User Has Been Added';
         header('Location: admin.php');
-    }
+    
 }
 ?>
+
+
+
 <h2 class="text-center">Add New User</h2><hr>
-<form action="users.php?add=1" method="post">
+<form action="admin.php?add=1" method="post">
 <div class="form-group col-md-6">
 <label for="name">Full Name:</label>
-<input type="text" name="name" id="name" class="form-control" value="<?=$name;?>">
+<input type="text" name="names" id="name" class="form-control" value="<?=$name;?>">
+</div>
+<div class="form-group col-md-6">
+<label for="name">User Name:</label>
+<input type="text" name="usernames" id="usernames" class="form-control" value="<?=$uname;?>">
 </div>
 <div class="form-group col-md-6">
 <label for="email">Email:</label>
-<input type="email" name="email" id="email" class="form-control" value="<?=$email;?>">
+<input type="email" name="emails" id="emails" class="form-control" value="<?=$email;?>">
 </div>
 <div class="form-group col-md-6">
 <label for="password">Password:</label>
-<input type="password" name="password" id="password" class="form-control" value="<?=$password;?>">
+<input type="password" name="passwords" id="passwords" class="form-control" value="<?=$password;?>">
 </div>
 <div class="form-group col-md-6">
 <label for="confirm">Confirm Password:</label>
@@ -78,14 +87,14 @@ if($_POST){
 </div>
 <div class="form-group col-md-6">
 <label for="permissions">Permissions:</label>
-<select class="form-control" name="permissions">
+<select class="form-control" name="permissionss">
 <option value=""<?=(($permissions == '')?'selected':'');?>></option>
 <option value="editor"<?=(($permissions == 'editor')?'selected':'');?>>Editor</option>
 <option value="admin,editor"<?=(($permissions == 'admin,editor')?'selected':'');?>>Admin</option>
 </select>
 </div>
 <div class="form-group col-md-6 text-right" style="margin-top:25px;">
-<a href="users.php" class="btn btn-default">Cancel</a>
+<a href="admin.php" class="btn btn-default">Cancel</a>
 <input type="submit" value="Add User" class="btn btn-primary">
 </div>
 </form>
@@ -94,31 +103,57 @@ if($_POST){
 }else{
 
     //query from selecting data from Users
-    $userQuery = $mysqli->query("SELECT * FROM users ORDER BY full_name");
+    $userQuery = $link->query("SELECT * FROM users ORDER BY fullnames");
     ?> 
+    <!--css and code for navigation bar -->
+<!DOCTYPE html>
+<html>
+<head>
+<link href="nav.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a class="active" href="admin.php">View Users</a></li>
+                <li><a href="sun/sunquiz.php">Sun Quiz</a></li>
+				<li><a href="asteroid/asteroidquiz.php">Asteroids Quiz</a></li>
+				 <li><a href="comet/cometquiz.php">Comets Quiz</a></li>
+				 <li><a href="meteor/meteorquiz.php">Meteorites Quiz</a></li>
+				 <li><a href="moon/moonquiz.php">Moon Quiz</a></li>
+                 <li><a href="planets/planetsquiz.php">Planets Quiz</a></li>
+    </ul>
+
+
+
+
+
+
+
+
     <h2>Users</h2>
-    <a href="users.php?add=1" class="btn btn-success pull-right" id="add-product-btn">Add New User</a>
+    <!-- <a href="admin.php?add=1" class="btn btn-success pull-right" id="add-product-btn">Add New User</a> -->
     <hr>
     <table class="table table-bordered table-striped table-condensed">
-        <thead><th></th><th>Name</th><th>Email</th><th>Join Date</th><th>Last Login</th><th>Permissions</th></thead>
+        <thead><th></th><th>Name</th><th>Username</th><th>Email</th><th>Password</th><th>Permissions</th></thead>
         <tbody>
         <?php while($user = mysqli_fetch_assoc($userQuery)): ?> 
             <tr>
                 <td>
                 <!-- delete button -->
-                <?php if($user['id'] != $user_data['id']): ?>
-                    <a href="users.php?delete=<?=$user['id']; ?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span></a>
+                
+                <?php if($user['id'] == $user['id']): ?>
+                    <a href="admin.php?delete=<?=$user['id']; ?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span></a>
                 <?php endif; ?>
                 </td>
-                <td><?= $user['full_name'];?></td>
+                <td><?= $user['fullnames'];?></td>
+                <td><?= $user['username'];?></td>
                 <td><?= $user['email'];?></td>
-                <td><?=pretty_date($user['join_date']);?></td>
-                <td><?=(($user['last_login'] == '0000-00-00 00:00:00')?'Never':pretty_date($user['last_login']));?></td>
+                <td><?= $user['password'];?></td>
                 <td><?= $user['permissions'];?></td>
             </tr>
 <?php endwhile;?>
 </tbody>
 </table>
-<?php }include 'includes/footer.php'; ?>
+<?php } ?>
 
-?>

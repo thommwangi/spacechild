@@ -6,7 +6,7 @@ body{
     font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif;
     font-size:1rem;
     line-height: 1.5;
-    color:#333;
+    color:#333; 
     overflow-x: hidden;
 }
 .v-header{
@@ -73,5 +73,3 @@ body{
     background:#333;
     color:#fff;
 }
-
-

@@ -7,7 +7,7 @@ $link = mysqli_connect("localhost", "root", "", "starchild");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+  
 // Escape user inputs for security
 $fullNames = mysqli_real_escape_string($link, $_REQUEST['fname']);
 $userName = mysqli_real_escape_string($link, $_REQUEST['uname']);

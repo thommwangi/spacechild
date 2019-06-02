@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="sun.css"> 
-   
-    <title>The Asteroid Belt</title>
+  <link href="sun.css" rel="stylesheet" type="text/css">
+  <title>Asteroids</title>
+  <style>
 
-    <style>
-  *{
+*{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
   }
-  body{
+  body{ 
    font-family: sans-serif;
   }
   a:link,
@@ -82,9 +77,10 @@
 }
 
 
-.wrapper{
+    .wrapper{
     margin: 0;
     width:1000px;
+    
     
 }
 .videowrapper{
@@ -103,39 +99,42 @@
     bottom:0px;
     height:100%;
     width:100%;
+    align:middle;
    
    
 }
- </style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+  </style>
 </head>
-<body>
-<header> 
-    <div class="container">
-
-        <div class="navigation-wrapper">
-            <div class="navigation-button">
-            <i class="fa fa-bars"></i> </div>
-            <div class="navigation-menu">
-                <ul>
-                    <li><a href="home.php">Home</a></li><br>
-                    <li><a href="solarsystem.php">Solar System</a></li><br>
-                    <li><a href="universe.php">Universe</a></li><br>
-                    <li><a href="spacestuff.php">Space Stuff</a></li><br>
-         
-                </ul>
-            </div>
-        </div>
-        </header>
-    <header class="v-header container">
-        <div class="fullscreen-video-wrap">
-            <video src="videos/Asteroid-Belt.mp4" autoplay="true"
-            loop="true" controls muted></video>
-        </div>
-        <div class="header-overlay">
+<header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      
+      <video src="videos/Asteroid-Belt.mp4" autoplay="" loop="" controls muted>
+    </video>
+    </div>
+    <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:white;font-size:10vw;">The Asteroid Belt</h1>
-                <p style="color:white;font-size:2vw;">An asteroid is a bit of rock. It can be thought of as what was "left over" after the Sun and all the planets were formed. 
+                <h1 style="color:black;font-size:10vw;">The Asteroid Belt</h1>
+                <p style="color:black;font-size:2vw;">An asteroid is a bit of rock. It can be thought of as what was "left over" after the Sun and all the planets were formed. 
                 The dwarf planet called Ceres orbits the Sun in the asteroid belt.
                     Watch the video below to learn more or click to read more.</p>
                      <a href="#modal" class="modal-open">Read More</a>
@@ -155,27 +154,21 @@ If an asteroid is captured by the gravitational pull of a planet, the asteroid c
 
             </div>
         </div>
-    </header>
-   
-        <div class="wrapper">
-        
-            <div class="videowrapper">
-            
-            </div>
-        </div>
-    
-    <section class="section section-b">
-        <div class="container">
-            <h1>part 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequuntur eaque 
-                accusantium expedita incidunt quaerat odio nesciunt commodi ratione qui minus distinctio 
-                corrupti dolore dolor nostrum libero eius dolorem, porro impedit quibusdam ex quod ut cum. 
-                Neque optio fugiat repellat inventore unde non consequatur assumenda. In quod accusamus 
-                ipsam tempore.</p>
-                
-        </div>
-    </section>
-    <!-- <script src="../js/nav.js"></script> -->
-</body>
+  </header>
 
-</html>
+  <div class="wrapper">
+  
+        <div class="videowrapper">
+          
+        <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          align="middle"></iframe>
+        </div>
+    </div>
+
+  <section class="section section-b">
+    <div class="container">
+      <h2>Quiz About The Asteroid Belt</h2>
+      <button class="button" onclick="window.location.href = 'quizes/asteroidquiz.php';">Click Here</button>
+    </div>
+  </section>
+  </html>
