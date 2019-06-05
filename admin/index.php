@@ -18,7 +18,7 @@
 
 
 </head>
-<body>
+<body> 
 
     <ul>
                 <li><a  href="index.php" class="active">Home</a></li>

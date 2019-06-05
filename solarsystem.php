@@ -10,7 +10,7 @@
     <body>
     <style>
           .feedback {
-            background-color : #31B0D5;
+            background-color : #31B0D5; 
             color: white;
             padding: 10px 20px;
             border-radius: 4px;

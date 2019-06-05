@@ -32,7 +32,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 40px;
   right: 100px;
   background: transparent;
@@ -64,7 +64,7 @@ body {
   transform: skewX(0deg) translate(100%,0);
   transform-origin: top right;
   transition: all .2s ease-in;
-  z-index: -1;
+  z-index: 4;
 }
 .navigation-menu ul {
   transform: skewX(-8deg);
