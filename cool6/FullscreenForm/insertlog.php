@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$link = mysqli_connect("localhost", "root", "", "starchild");
+$link = mysqli_connect("localhost", "102600", "choco95*", "starchild");
  
 // Check connection
 if($link === false){

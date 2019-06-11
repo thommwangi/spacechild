@@ -2,7 +2,7 @@
 include '../head.php';
 //include 'head.php';
 //include 'navigation.php';
-$link = mysqli_connect("localhost", "root", "", "starchild");
+$link = mysqli_connect("localhost", "102600", "choco95*", "starchild");
  
 // Check connection
 if($link === false){

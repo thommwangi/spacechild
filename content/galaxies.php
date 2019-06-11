@@ -1,16 +1,132 @@
-<?php
-    include 'head1.php';
-?>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="universe.css">
-        <!-- <link href="../css/nav.css" rel="stylesheet" type="text/css"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<head>
+  <link href="sun.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>The Galaxy</title>
+  <style>
 
-        <style>
-    body {
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+  body{ 
+   font-family: sans-serif;
+  }
+  a:link,
+  a:visited{
+   text-decoration: none;
+  }
+  .modal{
+   background-color: rgba(0,0,0, .8); 
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .modal__content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  #modal:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #modal:target .modal__content{
+   opacity: 1;
+   visibility: visible;
+  }
+  .modal__close{
+   color: #363636;
+   font-size: 2em;
+   position: absolute;
+   top: .5em;
+   right: 1em;
+  }
+  .modal__heading{
+   color: dodgerblue;
+   margin-bottom: 1em;
+  }
+  .modal__paragraph{
+   line-height: 1.5em;
+   color:black;
+  }
+.modal-open{
+ display: inline-block;
+ 
+ margin: 2em;
+ background: #34b3a0;
+    color:#fff;
+    font-size:1.2rem;
+    padding:1rem 2rem;
+    text-decoration: none;
+}
+
+
+    .wrapper{
+    margin: 0;
+    width:1000px;
+    
+    
+}
+.videowrapper{
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:25px;
+    height:0px;
+
+    
+}
+.videowrapper iframe{
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    height:100%;
+    width:100%;
+    align:middle;
+   
+   
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+body {
   background-image: url(ooo.jpeg);
         background-size: cover;
    font-family: 'Roboto Condensed', sans-serif;
@@ -136,24 +252,13 @@
 }
        
          
-        
-        
-    </style>
-    </head>
-    <body>
-
-    
 
 
+  </style>
+</head>
 <header class="v-header container">
     <div class="fullscreen-video-wrap">
-
-
-  
-  
-  
-  
-  <div class="navigation-wrapper">
+    <div class="navigation-wrapper">
         <div class="navigation-button">
         <i class="fa fa-bars"></i>
             </div>
@@ -172,29 +277,55 @@
       <video src="universe/galaxy.mp4" autoplay="" loop="" controls muted>
     </video>
     </div>
-    <div class="header-overlay"></div>
-    <div class="header-content text-md-center">
-      <h1>Welcome Everyone</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
-      <a class="btn1">Find Out More</a>
-    </div>
+    <div class="header-overlay">
+            <div class="header-content">
+                <h1 style="color:white;font-size:10vw;">The Galaxy</h1>
+                <p style="color:white;font-size:2vw;">A light-year is the distance light travels in one year.
+                 It is 9.5 trillion (9,500,000,000,000) kilometers. The size of a galaxy may be as little 
+                 as a thousand light-years across or as much as a million light-years across.
+                    A galaxy contains stars, gas, and dust which are held together as a group by gravity.
+                     There may be millions, or even billions, of stars in one galaxy. 
+                    Watch the video below to learn more or click to read more.</p>
+                     <a href="#modal" class="modal-open">Read More</a>
+                     
+               <div class="modal" id="modal">  
+                   <div class="modal__content">    
+                   <a href="#" class="modal__close">&times;</a>
+                   <h2 class="modal__heading">The Galaxy</h2>
+                   <p class="modal__paragraph">There are billions 
+                     of galaxies in the universe. Galaxies are labeled according to their shape. 
+                     Some galaxies are called "spiral", because they look like giant pinwheels in
+                      the sky. The galaxy we live in, the Milky Way, is a spiral galaxy. Some galaxies
+                       are called "elliptical", because they look like flat balls. A galaxy may be called 
+                       "irregular" if it doesn't really have a shape. A new type of galaxy was discovered 
+                       recently, called a "starburst" galaxy. In this type of galaxy, new stars just seem to
+                        'burst out' very quickly.
+
+                             </p>
+                        </div>
+                    </div>      
+                </div>
+
+            </div>
+        </div>
   </header>
 
-  <section class="section section-a">
-    <div class="container">
-      <h2>Section A</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+  <div class="wrapper">
+  
+        <div class="videowrapper">
+          
+        <!-- <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          align="middle"></iframe> -->
+            <video src="universe/galax.mp4" controls></video>
+        </div>
+
     </div>
-  </section>
 
   <section class="section section-b">
     <div class="container">
-      <h2>Section B</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+     
     </div>
   </section>
-  <!-- <script src="../js/nav.js"></script> -->
-
   <script>
     var navButton = document.querySelector('.navigation-button');
 var navMenu = document.querySelector('.navigation-menu');
@@ -220,5 +351,4 @@ function closeMenu(event) {
 win.addEventListener('click',closeMenu, false);
     
 </script>
-</body>
-</html>
+  </html>
