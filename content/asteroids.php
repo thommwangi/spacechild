@@ -274,9 +274,9 @@ body {
     </div>
     <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:black;font-size:10vw;">The Asteroid Belt</h1>
-                <p style="color:black;font-size:2vw;">An asteroid is a bit of rock. It can be thought of as what was "left over" after the Sun and all the planets were formed. 
-                The dwarf planet called Ceres orbits the Sun in the asteroid belt.
+                <h2 style="color:white;font-size:10vw;">The Asteroid Belt</h2>
+                <p style="color:white;font-size:2vw;">An asteroid is a bit of rock. It can be thought of as what was "left over" after the Sun and all the planets were formed. 
+                The dwarf planet called Ceres orbits the Sun in the asteroid belt.Most of the asteroids in our solar system can be found orbiting the Sun between the orbits of Mars and Jupiter.
                     Watch the video below to learn more or click to read more.</p>
                      <a href="#modal" class="modal-open">Read More</a>
                      
@@ -284,7 +284,7 @@ body {
                    <div class="modal__content">    
                    <a href="#" class="modal__close">&times;</a>
                    <h2 class="modal__heading">The Asteroid Belt</h2>
-                   <p class="modal__paragraph">Most of the asteroids in our solar system can be found orbiting the Sun between the orbits of Mars and Jupiter. This area is sometimes called the "asteroid belt". Think about it this way: the asteroid belt is a big highway in a circle around the Sun. Think about the asteroids as cars on the highway. Sometimes, the asteroid cars run into one another. When this happens, the asteroids may break up into smaller asteroids. Scientists think that most asteroids are the result of collisions between larger rocky space bodies.
+                   <p class="modal__paragraph"> This area is sometimes called the "asteroid belt". Think about it this way: the asteroid belt is a big highway in a circle around the Sun. Think about the asteroids as cars on the highway. Sometimes, the asteroid cars run into one another. When this happens, the asteroids may break up into smaller asteroids. Scientists think that most asteroids are the result of collisions between larger rocky space bodies.
 Asteroids can be a few feet to several hundred miles wide. The belt probably contains at least 40,000 asteroids that are more than 0.5 miles across.
 
 If an asteroid is captured by the gravitational pull of a planet, the asteroid can be pulled out of the belt and go into orbit as a moon around the planet that pulled on it.
@@ -297,13 +297,18 @@ If an asteroid is captured by the gravitational pull of a planet, the asteroid c
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
   
         <div class="videowrapper">
           
         <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           align="middle"></iframe>
         </div>
+    </div> -->
+
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

@@ -279,8 +279,8 @@ body {
     </div>
     <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:black;font-size:10vw;">The Planets</h1>
-                <p style="color:black;font-size:2vw;">TA planet is a large space object which revolves around a star.
+                <h1 style="color:white;font-size:10vw;">The Planets</h1>
+                <p style="color:white;font-size:2vw;">TA planet is a large space object which revolves around a star.
                  It also reflects that star's light. Eight planets have been discovered in our solar system. Mercury, 
                  Venus, Earth, and Mars are the planets closest to the Sun. 
                     Watch the video below to learn more or click to read more.</p>
@@ -304,13 +304,17 @@ body {
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
   
         <div class="videowrapper">
           
         <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           align="middle"></iframe>
         </div>
+    </div> -->
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

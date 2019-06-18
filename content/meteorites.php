@@ -275,8 +275,8 @@ body {
     </div>
     <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:black;font-size:10vw;">The Meteoroids</h1>
-                <p style="color:black;font-size:2vw;">A meteoroid is a piece of stone-like or metal-like
+                <h1 style="color:white;font-size:10vw;">The Meteoroids</h1>
+                <p style="color:white;font-size:2vw;">A meteoroid is a piece of stone-like or metal-like
                  debris which travels in outer space. Most meteoroids are no bigger than a pebble. 
                  Large meteoroids are believed to come from the asteroid belt.  
                     Watch the video below to learn more or click to read more.</p>
@@ -302,13 +302,18 @@ body {
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
   
         <div class="videowrapper">
           
         <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           align="middle"></iframe>
         </div>
+    </div> -->
+
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

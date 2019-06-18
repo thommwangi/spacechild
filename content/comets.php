@@ -275,8 +275,8 @@ body {
     </div>
     <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:black;font-size:10vw;">Comets</h1>
-                <p style="color:black;font-size:2vw;">A comet's tail can be millions of kilometers in length, 
+                <h1 style="color:#777;font-size:10vw;">Comets</h1>
+                <p style="color:#777;font-size:2vw;">A comet's tail can be millions of kilometers in length, 
                 but the amount of matter it contains can be held in a large bookbag. 
                 Scientists believe that comets are made up of material left over from when the Sun and the
                  planets were formed. They think that about 100,000 million comets orbit the Sun. Some comets
@@ -307,7 +307,7 @@ body {
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
   
         <div class="videowrapper">
           
@@ -315,6 +315,10 @@ body {
         autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           align="middle"></iframe>
         </div>
+    </div> -->
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

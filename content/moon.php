@@ -277,23 +277,24 @@ body {
     </div>
     <div class="header-overlay">
             <div class="header-content">
-                <h1 style="color:black;font-size:10vw;">The Moon</h1>
-                <p style="color:black;font-size:2vw;">The Moon is the only place in our solar system, other than Earth, where humans have visited. On July 20, 1969, astronauts Neil Armstrong and Edwin Aldrin landed the Lunar Module of Apollo 11 on the Moon's surface. Neil Armstrong was the first human to set foot on the Moon.
-                    Watch the video below to learn more or click to read more.</p>
+                <h1 style="color:white;font-size:10vw;">The Moon</h1>
+                <p style="color:white;font-size:2vw;">The Moon is the only place in our solar system, other than Earth, where humans have visited. On July 20, 1969, astronauts Neil Armstrong and Edwin Aldrin landed the Lunar Module of Apollo 11 on the Moon's surface. Neil Armstrong was the first human to set foot on the Moon.
+                   
+                Watch the video below to learn more or click to read more.</p>
                      <a href="#modal" class="modal-open">Read More</a>
                      
                <div class="modal" id="modal">  
                    <div class="modal__content">    
                    <a href="#" class="modal__close">&times;</a>
                    <h2 class="modal__heading">The Moon</h2>
-                   <p class="modal__paragraph">The Moon is like a desert with plains, mountains, and valleys. It also has many craters, which are holes created when space objects hit the Moon's surface at a high speed. There is no air to breathe on the Moon. Recently water ice was discovered at the poles (or top and bottom) of the Moon. The ice is buried beneath some of the dust of the Moon's surface. Scientists think the ice may be left over from a comet that once collided with the Moon.
+                   <p class="modal__paragraph"> Scientists think the ice may be left over from a comet that once collided with the Moon.
 
 Moon
 The Moon travels around the Earth in an oval shaped orbit. Scientists think the Moon was formed long ago when Earth collided with another space object. The collision may have caused a big chunk of rocky material to be thrown out into space to form the Moon.
 
 The Moon is a little lopsided. Its crust is thicker on one side than the other. The Moon is much smaller than the Earth. However, the pull of its gravity can still affect the Earth's ocean tides.
 
-We always see the same side of the Moon from Earth. You have to go into space to see the other side.
+We always see the same side of the Moon from Earth.
                             </p>
                         </div>
                     </div>      
@@ -303,13 +304,17 @@ We always see the same side of the Moon from Earth. You have to go into space to
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
   
         <div class="videowrapper">
           
         <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           align="middle"></iframe>
         </div>
+    </div> -->
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

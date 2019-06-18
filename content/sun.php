@@ -78,7 +78,7 @@
 }
 
 
-    .wrapper{
+.wrapper{
     margin: 0;
     width:1000px;
     
@@ -107,7 +107,7 @@
 .button {
   padding: 15px 25px;
   font-size: 24px;
-  text-align: center;
+  text-align: center; 
   cursor: pointer;
   outline: none;
   color: #fff;
@@ -306,13 +306,19 @@ body {
         </div>
   </header>
 
-  <div class="wrapper">
+  <!-- <div class="wrapper"> 
   
         <div class="videowrapper">
           
-        <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-          align="middle"></iframe>
+       
+         <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          align="middle"></iframe> 
         </div>
+    </div> -->
+
+    <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://www.youtube.com/embed/6FB0rDsR_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
     </div>
 
   <section class="section section-b">

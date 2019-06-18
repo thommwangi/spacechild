@@ -20,7 +20,7 @@ $permissions="";
 $res=$link->query("SELECT * FROM users WHERE username='$username' and password='$pass'") or die("Query Failed".mysqli_error());
 $row=mysqli_fetch_array($res);
 $permissions=$row['permissions'];
-if($row['username'] == $username && $row['password'] == $pass && $permissions="admin"){
+if( $permissions == "admin"){
         //echo "LOGIN SUCCESS!! WELCOME ".$row['username'];
         header('Location:../../admin/admin.php');
 
