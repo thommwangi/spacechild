@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2019 at 11:10 PM
+-- Generation Time: Jun 18, 2019 at 10:28 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -137,13 +137,6 @@ CREATE TABLE `planetsquiz` (
   `userans` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `planetsquiz`
---
-
-INSERT INTO `planetsquiz` (`id`, `que`, `option_1`, `option_2`, `option_3`, `option_4`, `ans`, `userans`) VALUES
-(1, 'what is the name of the process that gives the sun its energy?', '4 billion years', 'nuclear reaction', '7 billion years', 'flare', 'nuclear fusion', '');
-
 -- --------------------------------------------------------
 
 --
@@ -166,13 +159,11 @@ CREATE TABLE `sunquiz` (
 --
 
 INSERT INTO `sunquiz` (`id`, `que`, `option_1`, `option_2`, `option_3`, `option_4`, `ans`, `userans`) VALUES
-(1, 'How old is the sun?', '4 billion years', '3 million years', '7 billion years', '1 billion years', '4 billion years', '4 billion years'),
-(3, 'what is the name given to the storms seen on the surface of the sun?', 'spots', 'dots', 'sun spots', 'none of the above', 'sun spots', 'sun spots'),
-(4, 'what is the name given to the big explosions of energy produced by the sun? ', 'solar flares', 'big boom', 'bomb', 'flare', 'solar flares', 'solar flares'),
-(5, 'what is the name given to the particles from the sun that hit the earth?', 'aurora', 'heat', 'hot particles', 'none of the above', 'aurora', 'aurora'),
-(6, '1', '1', '1', '1', '1', '1', ''),
-(7, 'niaje', 'mtu', 'wangu', 'buda', 'boss', 'yes', ''),
-(8, 'How old is the sun?', '4 billion years', 'big boom', 'bomb', 'flare', 'nuclear fusion', '');
+(1, 'How old is the sun?', '4 billion years', '3 million years', '7 billion years', '1 billion years', '4 billion years', 'solar flares'),
+(2, 'what is the name of the process that gives the sun its energy?', 'nuclear fusion', 'nuclear reaction', 'chain reaction', 'none of the above', 'nuclear fusion', 'nuclear fusion'),
+(3, 'what is the name given to the big explosions of energy produced by the sun? ', 'solar flares', 'dots', 'hot particles', 'flare', 'aurora', 'solar flares'),
+(4, 'what is the name given to the particles from the sun that hit the earth?', 'solar flares', 'big boom', 'chain reaction', 'flare', 'solar flares', 'solar flares'),
+(5, 'what is the name given to the storms seen on the surface of the sun?', 'solar flares', 'heat', 'hot particles', '1 billion years', 'solar flares', 'solar flares');
 
 -- --------------------------------------------------------
 
@@ -197,9 +188,10 @@ INSERT INTO `users` (`id`, `fullnames`, `username`, `email`, `password`, `permis
 (1, 'thomas mwangi', 'mwangit', '', 'tomas', ''),
 (2, 'thomas mwangi', 'mwangit', '', 'tomas', ''),
 (3, 'hild msu', 'garder', 'thomasmwangi96@gmail.com', '1234', ''),
-(4, 'ule msee', 'msee', 'msee@gmail.com', '1234', ''),
+(4, 'ule msee', 'msee', 'msee@gmail.com', '1234', 'admin'),
 (5, 'shannon', 'shan', 'shan@gmail', '1234', ''),
-(6, 'megan', 'meg', 'meg@gmail', '1234', '');
+(6, 'megan', 'meg', 'meg@gmail', '1234', ''),
+(7, 'thomas', 'mwangi', 'thomasmwangi96@gmail.com', '1234', '');
 
 --
 -- Indexes for dumped tables
@@ -279,19 +271,19 @@ ALTER TABLE `moonquiz`
 -- AUTO_INCREMENT for table `planetsquiz`
 --
 ALTER TABLE `planetsquiz`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sunquiz`
 --
 ALTER TABLE `sunquiz`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
