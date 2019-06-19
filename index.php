@@ -72,10 +72,10 @@
           <div class="bcg" style="background-image: url(images/index/cat.jpg);"></div>
           <div class="content">
             <div class="description">
-              <h2 class="description-target">Welcome</h2>
+              <h2 class="description-target">Welcome to</h2>
             </div>
             <div class="headline">
-              <h1 class="headline-target">To Starchild</h1>
+              <h1 class="headline-target" >Starchild</h1>
             </div>
             <div class="discover-more">
               <a href="home.php" class="discover-more-target">Discover More</a>
@@ -96,7 +96,7 @@
     
     <?php
             include 'footer.php';
-        ?>
+        ?> 
     
 
   </body>

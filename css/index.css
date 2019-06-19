@@ -95,7 +95,7 @@ position: relative;
 display: block;
 width: 100%;
 height: auto;
-margin-top: 50%;
+margin-top: 20%;
 margin-top: 50vh;
 transform: translateY(-50%);
 text-align: center;
@@ -110,7 +110,8 @@ height: 24px;
 overflow: hidden;
 }
 .content .description h2 {
-color: #FFFFFA;
+/* color: #FFFFFA; */
+
 font-size: 24px;
 line-height: 24px;
 font-weight: 700;
@@ -125,18 +126,20 @@ position: relative;
 display: block;
 width: 100%;
 height: 65px;
-overflow: hidden;
+/*overflow: hidden; */
 margin: 32px 0;
+
 }
 
 .content .headline h1 {
-color: white;
-font-size: 70px;
+color: orange;
+font-size: 60px;
 line-height: 64px;
 font-weight: 900;
 text-transform: uppercase;
 margin: 0;
 padding: 0;
+
 }
 
 .content .discover-more { 
