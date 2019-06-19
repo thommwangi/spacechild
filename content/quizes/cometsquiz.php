@@ -212,7 +212,7 @@ body {
                     <li><a href="../../solarsystem.php">Solar System</a></li><br>
                     <li><a href="../../universe.php">Universe</a></li><br>
                     <li><a href="../../spacestuff.php">Space Stuff</a></li><br>
-         
+                    <li><a href="../../index.php">Log Out</a></li><br>
                 </ul>
             </div>
         </div>
